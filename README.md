@@ -1,5 +1,4 @@
-<h1>Network Security Groups & Inspecting Network Protocols in Azure - Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+<h1>Network Security Groups & Inspecting Network Protocols in Azure</h1>
 
 
 <h2>Environments and Technologies Used</h2>
@@ -17,42 +16,43 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/Ld3GeSw.png" height="80%" width="80%" alt="Go to whatismyipaddress.com"/>
+<img src="https://i.imgur.com/kP1MMzN.png" height="80%" width="80%" alt="Topology"/>
 </p>
 <p>
-Allow the website to locate your area and write down your IP Address.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/19vyGNQ.png" height="80%" width="80%" alt="Topology"/>
-</p>
-<p>
-This diagram show what the steps are and make it easier to understand.
+Diagram of entire process
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/vRvqXPH.png" height="80%" width="80%" alt="Create A Resource Group"/>
+<img src="https://i.imgur.com/LvqwQAB.png" height="80%" width="80%" alt="2 vm"/>
 </p>
 <p>
-You need to keep the region the same for a resource group and virtual machine.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/O91hmMz.png" height="80%" width="80%" alt="Create A Virtual Machine"/>
-</p>
-<p>
-Choose Windows 10, RDP, and the same region as the resource group you created.
+Create 2 virtual machine inside the Resource Group; one is Windows and the other is Ubuntu
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/GDmTLhb.png" height="80%" width="80%" alt="Remote Desktop Connection"/>
+<img src="https://i.imgur.com/KgvLtCw.png" height="80%" width="80%" alt="rdc"/>
 </p>
 <p>
-Copy the public IP Adress onto the remote desktop connection.
+Remote Desktop Connection to the VM1 public IP Address
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/OHQ1B65.jpg" height="80%" width="80%" alt="Download Wireshark"/>
+</p>
+<p>
+Download Wireshark inside the virtual machine
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/gjlwxEo.jpg" height="80%" width="80%" alt="Use Ping"/>
+<img src="https://i.imgur.com/W094nVH.jpg" height="80%" width="80%" alt="Use Ping"/>
+</p>
+<p>
+Use the ICMP protocol as the filter to observe the traffic. Open Windows Powershell and use "ping 10.0.0.5", "ping www.google.com", and "ping 10.0.0.5 -t". These commands will show how much data is being sent and received.
 </p>
 <br />
 
