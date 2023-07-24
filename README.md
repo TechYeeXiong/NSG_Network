@@ -49,26 +49,27 @@ Download Wireshark inside the virtual machine
 
 <p>
 <img src="https://i.imgur.com/gjlwxEo.jpg" height="80%" width="80%" alt="Use Ping"/>
+<img src="https://i.imgur.com/mdfsOYp.png" height="80%" width="80%" alt="Use Ping"/>
 <img src="https://i.imgur.com/W094nVH.jpg" height="80%" width="80%" alt="Use Ping"/>
 </p>
 <p>
-Use the ICMP protocol as the filter to observe the traffic. Open Windows Powershell and use "ping 10.0.0.5", "ping www.google.com", and "ping 10.0.0.5 -t". These commands will show how much data is being sent and received.
+Use the ICMP protocol as the filter to observe the traffic. Open Windows Powershell then use "ping 10.0.0.5" and "ping www.google.com". Next go to VM2's network security group and create an inbound security rule to deny ICMP traffic. These commands will show how much data is being sent and received.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/LNeqMT0.jpg" height="80%" width="80%" alt="Download ProtonVPN into Windows"/>
+<img src="https://i.imgur.com/CyRmSTz.jpg" height="80%" width="80%" alt="SSH"/>
 </p>
 <p>
-Choose the windows download.
+Use SSH to filter the traffic. In Powershell, use SSH to remotely connect to VM2 by typing "ssh labuser@10.0.0.5". Next type "pwd", "id", and "ls -lasth". Observe the traffic.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/P8plfWA.jpg" height="80%" width="80%" alt="Connect To An Open Free VPN Server"/>
+<img src="https://i.imgur.com/JF6RkKG.jpg" height="80%" width="80%" alt="DHCP"/>
 </p>
 <p>
-Connect to Japan.
+Use DHCP to filter the traffic. In Powershell, type "ipconfig /renew" then observe the traffic.
 </p>
 <br />
 
@@ -81,17 +82,17 @@ The IP Address is now located in Tokyo.
 <br />
 
 <p>
-<img src="https://i.imgur.com/tPGCmMt.jpg" height="80%" width="80%" alt="Go to google and observe the changes"/>
+<img src="https://i.imgur.com/f06KkBn.jpg" height="80%" width="80%" alt="DNS"/>
 </p>
 <p>
-Since VPN is used in a Japan server; Google changed.
+Use DNS to filter the traffic. In Powershell, type "nslookup www.google.com" and "nslookup www.disney.com" to find the IP Address for both website and observe the traffic.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/QGIXapN.jpg" height="80%" width="80%" alt="Look at Netflix's URL"/>
+<img src="https://i.imgur.com/KqAPmcB.jpg" height="80%" width="80%" alt="RDP"/>
 </p>
 <p>
-The ending of the URL is now "jp-en/".
+In order to use RDP in the filter; you type in "tcp.port == 3389". Since RDP was selected as the protocol for VM1 when it was created; the rdp filter will spam nonstop. Every movement or words being typed inside the virtual machine will cause traffic to be sent.
 </p>
 <br />
