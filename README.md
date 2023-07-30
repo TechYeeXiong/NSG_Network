@@ -74,14 +74,6 @@ Use DHCP to filter the traffic. In Powershell, type "ipconfig /renew" then obser
 <br />
 
 <p>
-<img src="https://i.imgur.com/lFkECUi.jpg" height="80%" width="80%" alt="Go onto whatismyipaddress.com"/>
-</p>
-<p>
-The IP Address is now located in Tokyo.
-</p>
-<br />
-
-<p>
 <img src="https://i.imgur.com/f06KkBn.jpg" height="80%" width="80%" alt="DNS"/>
 </p>
 <p>
